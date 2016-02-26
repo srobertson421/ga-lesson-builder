@@ -1,0 +1,17 @@
+<template name="profile">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1>Profile
+        {{#each user.emails}}
+          <small>{{address}}</small>
+        {{/each}}
+      </h1>
+      {{#each projects}}
+        <div class="well project-list-item">
+          <button type="button" class="btn btn-danger pull-right">Delete</button>
+          <h2><a href="/editor/{{urlTitle}}/{{_id}}">{{title}}</a></h2>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</template>
